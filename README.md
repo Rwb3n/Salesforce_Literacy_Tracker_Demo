@@ -1,51 +1,96 @@
-# Literacy Tracker - Salesforce Declarative Build
+# 📚 Literacy Tracker - Salesforce Declarative Build
 
-## Overview
-This repository/project documents the development of the "Literacy Tracker," a custom application built entirely on the Salesforce platform using declarative tools only (no Apex, LWC custom code, or external packages like DLRS).
-The application is designed for non-profit organizations, specifically modelled around the needs of a children's literacy charity like Bookmark Reading, to manage and track key aspects of their reading programs end-to-end. It empowers programme staff, volunteers, and managers to monitor student progress, volunteer contributions, and overall programme health.
-Core Goal: To provide a comprehensive, scalable, and maintainable CRM solution built natively on Salesforce without relying on custom code development, maximizing the use of Flows, standard configuration, and declarative best practices.
-Key Features (Implemented & Planned)
-This application provides (or will provide upon completion of all phases) the following capabilities:
-Student Tracking: Manage student participant records, including demographics and current reading level status.
-Session Logging: Easy logging of individual reading sessions via a dedicated Screen Flow, capturing duration, book read, focus areas, location, and status.
-Book Catalogue: Maintain a simple catalogue of books used within the program, including reading levels.
-Location Management: Track physical locations where sessions occur, linked to parent Organizations (Accounts) and Contact Persons (Contacts).
-Assessment Tracking: Log formal reading assessments, including skill scores, determined reading levels, and level changes.
-Confidence Monitoring: Capture periodic student confidence surveys using simple rating scales.
-Volunteer Management:
-Identify Volunteers using a dedicated Contact Record Type.
-Track volunteer assignments to specific students using a junction object (Student_Volunteer__c), including roles and status.
-Automated Aggregation: A nightly scheduled flow calculates and updates Total Hours Served and Active Student Assignments directly on the Volunteer (Contact) record.
-Milestone Generation: Automatically create celebratory Milestone records based on student achievements (e.g., reading level advancement, reaching session count or reading minute thresholds).
-Automated Recency Tracking: Flows automatically update key fields on the Student record like Last Session Date/Time, Latest Session Focus Area, and Latest Book Read.
-Reading Level Synchronization: A flow automatically updates the student's primary reading level based on their latest, highest assessment result.
-Student Path: Visual progress tracking on the Student record page using Salesforce Path based on Current Reading Level, displaying key fields and guidance at each stage.
-Role-Based Security: Utilizes Profiles, Permission Sets, and Permission Set Groups (Literacy Specialist Role, Literacy Program Manager Role) to provide appropriate access levels.
-Reporting & Dashboards: Includes source reports and dedicated dashboards for Volunteer Impact, Student Progress, and Programme Health (built across phases).
-Demo Data Generation: Administrator tools (Flows) to generate realistic test data for multiple objects, respecting governor limits using batching and scheduled paths. Includes a Demo_Data__c flag for easy cleanup.
-Technical Approach & Constraints
-100% Declarative: Built entirely using standard Salesforce configuration and Flow automation.
-NO Apex Classes or Triggers.
-NO Lightning Web Components (Custom).
-NO External/Unmanaged Packages (like Declarative Lookup Rollup Summaries - DLRS).
-Scalability Considerations: Flows are designed with governor limits in mind, employing techniques like:
-Collection Slice Pattern: For DML operations within loops (e.g., Demo Data generation, Volunteer Aggregator updates).
-SOQL Query Optimization: Avoiding queries inside loops where possible (e.g., Volunteer Aggregator fetches all assignments once).
-Scheduled Paths: Offloading potentially long-running operations (like bulk session creation in demo data) to asynchronous transactions.
-Data Model: Utilizes standard objects (Contact, Account) and custom objects, linked via appropriate Master-Detail and Lookup relationships.
-Security: Leverages standard Salesforce security features (Profiles, Permission Sets, Permission Set Groups, Record Types, Sharing controlled by Parent where applicable).
-Project Status & Roadmap
-The project is being developed in phases:
-Phase 1: Foundation (COMPLETE): Core objects (Student, Session, Book, Location), session logging flow, student recency updates, basic security.
-Phase 2: Assessments & Confidence (COMPLETE): Assessment, Confidence Survey, Milestone objects; data capture flows; reading level sync; initial milestone generation logic.
-Phase 3: Volunteer & Location (COMPLETE): Volunteer Record Type, Student-Volunteer junction object, scheduled volunteer hours aggregation flow, UI updates for volunteer visibility, Volunteer Impact dashboard, initial Demo Data flows.
-Phase 4: Milestones & Dashboards (Planned): Refine milestone triggers, implement celebration toasts, build remaining dashboards (Student Progress, Programme Health), implement Student Inactivity flag flow.
-Phase 5: Data Generation Kit (Planned): Enhance demo data flows, build cleanup utility, potentially add load scripts/documentation.
-Phase 6: Polish & UAT (Planned): Mobile optimizations, final permission hardening, user training materials, User Acceptance Testing.
-Demo Access
-A development environment demonstrating the current state is available at:
-[Link: https://rubenpires-dev-ed.develop.lightning.force.com/]
-Login Credentials (Test User - Specialist Role):
-Username: jvolu@ruben.pires
-Password: VOLUNTEER123
-(Note: Please use responsibly for evaluation purposes. Data may be reset periodically).
+## 🚧 Overview
+
+This repository documents the **work-in-progress** development of the **Literacy Tracker**, a custom-built application developed **entirely using Salesforce declarative tools**—no Apex, no LWC, no unmanaged packages like DLRS. Despite being under active development, a functional demo is live and accessible.
+
+Built for **non-profit organizations**—modeled after children’s literacy programs like **Bookmark Reading**—the Literacy Tracker enables staff, volunteers, and managers to track reading sessions, student progress, and programme health with clarity and precision.
+
+> 🎯 **Core Goal:** Deliver a fully native, scalable CRM solution using only Flows, standard objects, and configuration—maximizing maintainability and transparency.
+
+⚠️ **Documentation is not final.** Features are being actively refined, but the system is stable enough for demonstration and evaluation.
+
+---
+
+## ✨ Key Features (Live & In Progress)
+
+- **👦 Student Tracking:** Manage demographics, reading levels, and recency data.
+- **📖 Session Logging:** Dedicated Screen Flow to log duration, book, focus, location, and status.
+- **📚 Book Catalogue:** Centralized record of books used, mapped by reading level.
+- **📍 Location Management:** Track session locations tied to Accounts and Contacts.
+- **📊 Assessment Tracking:** Record scores, reading level results, and level transitions.
+- **💬 Confidence Monitoring:** Periodic student confidence surveys using ratings.
+
+### 🤝 Volunteer Management
+
+- Dedicated **Contact Record Type** for volunteers.
+- Student-volunteer relationship managed via `Student_Volunteer__c` junction object.
+- **🕒 Volunteer Aggregator Flow:** Scheduled to calculate hours served and current assignments.
+- **🏅 Milestone Generator:** Auto-creates achievements based on reading level-ups, time, or session count.
+- **🔁 Recency Flows:** Automatically update Last Session Date, Focus Area, and Book Read.
+- **📈 Reading Level Sync:** Always reflects latest/highest reading assessment.
+- **🚦 Student Path UI:** Visual guidance tied to reading levels via Salesforce Path.
+- **🔐 Role-Based Security:** Managed with Profiles, Permission Sets, and Permission Set Groups.
+- **📉 Dashboards:** Volunteer Impact live; others in final polish.
+- **🧪 Demo Data Tools:** Admin Flows generate realistic sample data with cleanup tags.
+
+---
+
+## 🛠️ Technical Architecture
+
+- **100% Declarative:** No Apex, no LWC, no external packages.
+- ❌ Apex  
+- ❌ Custom LWC  
+- ❌ DLRS / Unmanaged Packages
+
+### 💡 Performance Patterns
+
+- **Collection Slice Pattern** for bulk-safe DML inside Flows.
+- **Optimized SOQL**: Pre-fetches to avoid loops.
+- **Scheduled Paths**: Async logic for scalable demo data flows.
+
+### 🧱 Data Model
+
+Uses standard (`Contact`, `Account`) and custom objects linked by Master-Detail or Lookup relationships.
+
+### 🔐 Security Model
+
+Role-based access using Salesforce native features: Profiles, PS, PSGs, and Record Type sharing logic.
+
+---
+
+## 🚦 Project Roadmap
+
+Development follows structured phases. Current progress:
+
+- ✅ **Phase 1: Foundation**  
+  Core data model (Student, Session, Book, Location), logging flows, basic access control.
+
+- ✅ **Phase 2: Assessments & Confidence**  
+  Reading assessments, confidence surveys, level syncing, milestone generation.
+
+- ✅ **Phase 3: Volunteer & Location**  
+  Volunteer assignments, aggregator logic, dashboards, demo data tools.
+
+- ✅ **Phase 4: Milestones & Dashboards**  
+  Final milestone logic, celebration system, programme health and student progress dashboards.
+
+- 🟡 **Phase 5: Data Generation Kit (90%)**  
+  Demo data flows complete; finalizing demo records for **assessments** and **confidence surveys**.
+
+- 🔵 **Phase 6: Polish & UAT (50%)**  
+  Mobile tweaks, permission hardening, training materials, and user testing underway.
+
+---
+
+## 🚀 Demo Access
+
+A live sandbox is available for preview and testing:
+
+🔗 [https://rubenpires-dev-ed.develop.lightning.force.com/](https://rubenpires-dev-ed.develop.lightning.force.com/)
+
+**🧪 Test Credentials (Literacy Specialist Role):**  
+- 👤 Username: `jvolu@ruben.pires`  
+- 🔑 Password: `VOLUNTEER123`  
+
+> *Please use responsibly. Demo data is reset periodically.*
