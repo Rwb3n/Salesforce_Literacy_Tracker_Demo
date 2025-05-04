@@ -6,9 +6,17 @@ This repository documents the **work-in-progress** development of the **Literacy
 
 Built for **non-profit organizations**—modeled after children’s literacy programs like **Bookmark Reading**—the Literacy Tracker enables staff, volunteers, and managers to track reading sessions, student progress, and programme health with clarity and precision.
 
-> 🎯 **Core Goal:** Deliver a fully native, scalable CRM solution using only Flows, maximizing maintainability and transparency.
+> 🎯 **Core Goal:** Deliver a fully native, scalable CRM solution using only Flows, standard objects, and configuration—maximizing maintainability and transparency.
 
 ⚠️ **Documentation is not final.** Features are being actively refined, but the system is stable enough for demonstration and evaluation.
+
+---
+
+## 📄 Reports & Visuals
+
+- 📘 [Phase 1 Report (PDF)](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%201%20report.pdf)  
+- 📗 [Phase 2 Report (PDF)](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%202%20report.pdf)  
+- 📊 [Latest Main Dashboard Screenshot](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/Screenshot%202025-05-04%20185553.png)
 
 ---
 
@@ -64,19 +72,22 @@ Role-based access using Salesforce native features: Profiles, PS, PSGs, and Reco
 Development follows structured phases. Current progress:
 
 - ✅ **Phase 1: Foundation**  
-  Core data model (Student, Session, Book, Location), logging flows, basic access control.
+  Core data model (Student, Session, Book, Location), logging flows, basic access control.  
+  📘 [View Phase 1 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%201%20report.pdf)
 
 - ✅ **Phase 2: Assessments & Confidence**  
-  Reading assessments, confidence surveys, level syncing, milestone generation.
+  Reading assessments, confidence surveys, level syncing, milestone generation.  
+  📗 [View Phase 2 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%202%20report.pdf)
 
 - ✅ **Phase 3: Volunteer & Location**  
   Volunteer assignments, aggregator logic, dashboards, demo data tools.
 
 - ✅ **Phase 4: Milestones & Dashboards**  
-  Final milestone logic, celebration system, programme health and student progress dashboards.
+  Final milestone logic, celebration system, programme health and student progress dashboards.  
+  📊 [Latest Dashboard Screenshot](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/Screenshot%202025-05-04%20185553.png)
 
 - 🟡 **Phase 5: Data Generation Kit (90%)**  
-  Demo data flows complete; finalizing demo records for **assessments** and **confidence surveys**.
+  Demo data flows complete; remaining work includes assessment and confidence survey demo records.
 
 - 🔵 **Phase 6: Polish & UAT (50%)**  
   Mobile tweaks, permission hardening, training materials, and user testing underway.
