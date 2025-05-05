@@ -2,11 +2,11 @@
 
 ## 🚧 Overview
 
-This repository documents the **work-in-progress** development of the **Literacy Tracker**, a custom-built application developed **entirely using Salesforce declarative tools**—no Apex, no LWC, no unmanaged packages like DLRS. Despite being under active development, a functional demo is live and accessible.
+This repository documents the **work-in-progress** development of the **Literacy Tracker**, a custom-built application developed **entirely using Salesforce declarative tools**, no Apex, no LWC, no unmanaged packages like DLRS. Despite being under active development, a functional demo is live and accessible.
 
-Built for **non-profit organizations**—modeled after children’s literacy programs like **Bookmark Reading**—the Literacy Tracker enables staff, volunteers, and managers to track reading sessions, student progress, and programme health with clarity and precision.
+Built for **non-profit organizations**, modeled after children’s literacy programs.The Literacy Tracker enables staff, volunteers, and managers to track reading sessions, student progress, and programme health with clarity and precision.
 
-> 🎯 **Core Goal:** Deliver a fully native, scalable CRM solution using only Flows, standard objects, and configuration—maximizing maintainability and transparency.
+> 🎯 **Core Goal:** Deliver a fully native, scalable CRM solution. Maximizing maintainability and transparency.
 
 ⚠️ **Documentation is not final.** Features are being actively refined, but the system is stable enough for demonstration and evaluation.
 
