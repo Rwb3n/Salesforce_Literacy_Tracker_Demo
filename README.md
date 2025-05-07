@@ -16,7 +16,7 @@ Built for **non-profit organizations**, modeled after children’s literacy prog
 
 - 📘 [Phase 1 Report (PDF)](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%201%20report.pdf)  
 - 📗 [Phase 2 Report (PDF)](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%202%20report.pdf)
-- 📙 [Phase 2 Report (PDF)](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%203%20report.pdf)  
+- 📙 [Phase 3 Report (PDF)](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%203%20report.pdf)  
 - 📊 [Latest Main Dashboard Screenshot](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/Screenshot%202025-05-04%20185553.png)
 
 ---
@@ -82,7 +82,7 @@ Development follows structured phases. Current progress:
 
 - ✅ **Phase 3: Volunteer & Location**  
   Volunteer assignments, aggregator logic, dashboards, demo data tools.
-  📙 [View Phase 2 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%203%20report.pdf)
+  📙 [View Phase 3 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%203%20report.pdf)
 
 - ✅ **Phase 4: Milestones & Dashboards**  
   Final milestone logic, celebration system, programme health and student progress dashboards.  
