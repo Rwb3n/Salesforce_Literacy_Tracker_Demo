@@ -73,16 +73,16 @@ Role-based access using Salesforce native features: Profiles, PS, PSGs, and Reco
 Development follows structured phases. Current progress:
 
 - ✅ **Phase 1: Foundation**  
-  Core data model (Student, Session, Book, Location), logging flows, basic access control.  
-  📘 [View Phase 1 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%201%20report.pdf)
+  Core data model (Student, Session, Book, Location), logging flows, basic access control.
+  - 📘 [View Phase 1 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%201%20report.pdf)
 
 - ✅ **Phase 2: Assessments & Confidence**  
-  Reading assessments, confidence surveys, level syncing, milestone generation.  
-  📗 [View Phase 2 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%202%20report.pdf)
+  Reading assessments, confidence surveys, level syncing, milestone generation.
+  - 📗 [View Phase 2 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%202%20report.pdf)
 
 - ✅ **Phase 3: Volunteer & Location**  
   Volunteer assignments, aggregator logic, dashboards, demo data tools.
-  📙 [View Phase 3 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%203%20report.pdf)
+  - 📙 [View Phase 3 Report](https://github.com/Rwb3n/Salesforce_Literacy_Tracker_Demo/blob/main/literacy%20tracker%20phase%203%20report.pdf)
 
 - ✅ **Phase 4: Milestones & Dashboards**  
   Final milestone logic, celebration system, programme health and student progress dashboards.  
